@@ -260,7 +260,7 @@ section { padding: 7rem var(--container-px); }
 }
 .hero-title em { font-style:italic; color:var(--moss-dark); }
 .hero-accent{
-  font-family: var(--font-accent) !important;
+  font-family: "Antique Resort", serif !important;
   color: #25d366;
 font-size: 6rem;
 }
