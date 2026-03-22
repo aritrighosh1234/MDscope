@@ -481,7 +481,7 @@ function Contact() {
     { Icon: Phone,  label: "Phone / WhatsApp", value: CONTACT.phone,    color: "#c4896b" },
     { Icon: Mail,   label: "Email",            value: CONTACT.email,    color: "#6b8c6e" },
     { Icon: Instagram, label: "Instagram", value: CONTACT.instagram, color: "#E4405F" },
-    { Icon: MapPin, label: "Location",         value: CONTACT.location, color: "#6878c8" },
+    { Icon: MapPin, label: "Location", link:"https://share.google/Nnd2wUHND0CewCwoz", value: CONTACT.location, color: "#6878c8" },
   ];
 
   return (
@@ -497,14 +497,14 @@ function Contact() {
               Reaching out is the hardest part — and the most important one. I'd love to hear from you.
             </p></div>
             <div className="contact-details">
-              {DETAILS.map(({ Icon, label, value, color }) => (
+              {DETAILS.map(({ Icon, label, value,link, color }) => (
                 <div className="contact-detail" key={label}>
                   <div className="contact-detail-icon" style={{ background: color + "28", color }}>
                     <Icon size={17} strokeWidth={1.5} />
                   </div>
                   <div className="contact-detail-text">
-                    <a className="contact-detail-label" style={{ color }}>{label}</a>
-                    <div className="contact-detail-value">{value}</div>
+                    <div className="contact-detail-label" style={{ color }}>{label}</div>
+                    <a href={link} className="contact-detail-value">{value}</a>
                   </div>
                 </div>
               ))}
