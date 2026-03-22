@@ -24,6 +24,7 @@ import "./Mindscope.css";
 import heroLogo from "./assets/Hero.png" 
 import therapist from "./assets/Therapist.jpeg" 
 import footerLogo from "./assets/Footer.png" 
+import thoughtful from "./assets/Thoughtful.png"
 
 // ── Per-service accent colours (cycles if more services added) ──────────
 const CARD_ACCENTS = [
@@ -204,7 +205,7 @@ function Hero() {
         
         <h1 className="hero-title">
           Boutique Therapy for<br/>
-          <em className="hero-accent">Thoughtful</em> Emotional Care
+          <img className="hero-accent" src={thoughtful} alt="th" /> Emotional Care
         </h1>
         <p className="hero-sub">{SITE.heroSubtext}</p>
         <div className="hero-actions">
