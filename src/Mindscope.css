@@ -775,43 +775,88 @@ section { padding: 7rem var(--container-px); }
   .services-arrows { gap:.5rem; }
   .svc-arrow { width:40px; height:40px; }
 }
-/* ── WHATSAPP FAB ─────────────────────────────────────────── */
-.wa-fab {
+.small{
+  font-size: 0.6rem;
+  font-weight: 300;
+}
+.wa-fab-wrapper {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 200;
+  bottom: 28px;
+  right: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+  flex-direction: row-reverse;
+}
+
+.wa-fab {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: #25d366;
+  background: #25D366;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-.wa-fab:hover {
-  transform: scale(1.1) translateY(-2px);
-  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.55);
+  flex-shrink: 0;
+  text-decoration: none;
 }
 
-/* pulse ring */
-.wa-fab::before {
-  content: '';
+.wa-label {
+  position: relative;
+  background: #6b8c6e;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 32px 8px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+  line-height: 1.4;
+  animation: slideIn 0.4s ease 0.6s both;
+}
+
+.wa-label span {
+  font-weight: 400;
+  opacity: 0.9;
+  font-size: 12px;
+  display: block;
+}
+
+.wa-close {
   position: absolute;
-  inset: 0;
+  top: -7px;
+  right: -7px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background: #25d366;
-  animation: waPulse 2.4s ease-out infinite;
-  z-index: -1;
-}
-@keyframes waPulse {
-  0%   { transform: scale(1);   opacity: 0.6; }
-  70%  { transform: scale(1.55); opacity: 0;   }
-  100% { transform: scale(1.55); opacity: 0;   }
+  border: none;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background 0.2s;
 }
 
-@media (max-width: 768px) {
-  .wa-fab { bottom: 1.2rem; right: 1.2rem; width: 50px; height: 50px; }
+.wa-close:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes slideIn {
+  from {
+    max-width: 0;
+    opacity: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  to {
+    max-width: 260px;
+    opacity: 1;
+    padding-left: 14px;
+    padding-right: 32px;
+  }
 }
