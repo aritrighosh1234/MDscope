@@ -168,7 +168,7 @@ export const RESOURCES = [
 export const CONTACT = {
   email: "ghosharitri97@gmail.com",
   phone: "+91 8582972151",
-  whatsapp: "916290954149",
+  whatsapp: "918582972151",
   location: "North Bank Diagnostic Centre, Bandhaghat, Salkia, Howrah, West Bengal, 711106",
   instagram:  "www.instagram.com/mindscopeby",
   calendly: "#", // replace with booking link
